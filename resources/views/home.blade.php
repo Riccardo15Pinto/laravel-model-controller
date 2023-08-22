@@ -17,7 +17,22 @@
 
 <body>
     <main>
+        <div class=" container p-5">
+            <div class="row row-cols-4">
 
+                @foreach ($movies as $movie)
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $movie->title }}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">{{ $movie->original_title }}</h6>
+                                <p class="card-text">{{ $movie->nationality }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
     </main>
 
 </body>
